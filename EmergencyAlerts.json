@@ -1,0 +1,81 @@
+{
+	"name" : "Emergency Alerts",
+	"architecturesView" : ["SC", "MC"],
+	"lVariables" : [
+		{
+			"varName" : "GPSFreq",
+			"values" : [24, 12, 6, 3]	
+		},{
+			"varName" : "PUSHFreq",
+			"values" : [1, 0.33, 0.14]	
+		}
+	],
+	"lArchitectures" : [
+		{
+			"arName" : "SC",
+			"caseOfUses" : [
+				{
+					"cuName" : "CU1-Posting Location",
+					"usedVar" : ["GPSFreq"],
+					"lPrimitives" :[
+						{
+							"type" : "post",
+							"usedVar" : [],
+							"lOperations" : [
+								{
+								"size" : 16,
+								"usedVar" : []
+								}
+							]
+						},{
+							"type" : "getGPS",
+							"usedVar" : [],
+							"lOperations" : []
+						}
+					]
+				},{
+					"cuName" : "CU2-ReceiveEmergency",
+					"usedVar" : ["PUSHFreq"],
+					"lPrimitives" : [
+						{
+							"type" : "receivePush",
+							"usedVar" : [],
+							"lOperations" : []
+
+						}
+					]
+				}
+			]
+		} ,{
+			"arName" : "MC",
+			"caseOfUses" : [
+				{
+					"cuName" : "CU2-ReceiveEmergency",
+					"usedVar" : ["PUSHFreq"],
+					"lPrimitives" : [
+						{
+							"type" : "receivePush",
+							"usedVar" : [],
+							"lOperations" : []
+
+						},{
+							"type" : "getGPS",
+							"usedVar" : [],
+							"lOperations" : []
+						},{
+							"type" : "post",
+							"usedVar" : [],
+							"lOperations" : [ 
+								{
+								"size" : 16,
+								"usedVar" : []
+								}
+							]
+						}
+					]
+				}	
+			]
+		}
+
+	]
+}
