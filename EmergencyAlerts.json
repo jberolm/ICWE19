@@ -34,7 +34,7 @@
 						}
 					]
 				},{
-					"cuName" : "CU2-ReceiveEmergency",
+					"cuName" : "CU2-ReceiveAlert",
 					"usedVar" : ["PUSHFreq"],
 					"lPrimitives" : [
 						{
@@ -50,7 +50,7 @@
 			"arName" : "MC",
 			"caseOfUses" : [
 				{
-					"cuName" : "CU2-ReceiveEmergency",
+					"cuName" : "CU2-ReceiveAlert",
 					"usedVar" : ["PUSHFreq"],
 					"lPrimitives" : [
 						{
