@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Emergency Alerts
-  description: This applications monitor the users' location in order to send them alerts about possible emergencies in their area.
+  description: This application monitors the users' location in order to send them alerts about possible emergencies in their areas.
   version: '1.0'
   termsOfService: 'https://emergencies.spilab.es/terms'
   contact:
@@ -13,8 +13,8 @@ paths:
     post:
       tags:
         - Emergencies
-      summary: Sends an emergency to the devices
-      description: An emergency is sent to the devices and shown to the users inside the emergency area
+      summary: Sends an emergency to devices
+      description: An emergency is sent to devices and shown to the users inside the emergency area
       operationId: postEmergency
       requestBody:
         description: Information about the emergency
