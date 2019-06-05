@@ -1,13 +1,13 @@
 {
-	"to": "tokenID",
+	"to": "tokenID Change this data",
 	"data":{
 		"resource": "Emergencies",
 		"method": "postEmergency",
 		"params" : {
 				"emergency": {
 					"id" : 1,
-					"title" : "Notas",
-					"description" : "Notas publicadas",
+					"title" : "Earthquake",
+					"description" : "Earthquake in Japan",
 					"latitude" : -6.56, 
 					"longitude" : 39.53,
 					"radius" : 100
